@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 // import { QuotesDetailsComponent } from './quote-details/quote-details.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { StrikethroughDirective } from './strikethrough.directive';
 //  import { QuotesComponent } from './quotes/quotes.component';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     QuotesComponent,
     // QuotesDetailsComponent,
     QuoteDetailsComponent,
-     QuotesComponent
+     QuotesComponent,
+     StrikethroughDirective
   ],
   imports: [
     BrowserModule,
