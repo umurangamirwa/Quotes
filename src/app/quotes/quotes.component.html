@@ -5,6 +5,32 @@
         <app-quote-form (addQuotes)="addNewQuotes($event)"></app-quote-form>
     </div>
     <div class="row" *ngFor='let Quotes of quotes;let i = index'>
+            toggleDetails(index) {
+                this.Quotes[index].showAuthor = !this.Quotes[index].showAuthor;
+                this.Quotes[index].showFan = !this.Quotes[index].showFan;
+              }
+              upvote(index) {
+                this.Quotes[index].upvotes++;
+              }
+              downvote(index) {
+                this.Quotes[index].downvotes++;
+              }
+              deleteQuoteS(isComplete, index) {
+                if (isComplete) {
+                  let toDelete = confirm(
+                    `Are you sure you want to delete ${this.quotes[index].name}`
+                  );
+            
+                  if (toDelete) {
+                    this.Quotes.splice(index, 1);
+                  }
+                }
+              }
+              addNewQuoteS(quote) {
+                this.Quotes.push(quote);
+              }
+              
+
         
         <h4 id="{{i}}" appStrikethrough>{{Quotes.name}} due on {{Quotes.completeDate|date|uppercase}}</h4>
          
@@ -20,3 +46,9 @@
     
 </div>
 <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+constructor() {}
+
+  ngOnInit() {
+      
+  }
+
