@@ -3,13 +3,13 @@
 </p> -->
 <div class="container-fluid">
     <div class="row">
-        <form #goalForm='ngForm'>
+        <form (ngSubmit)='submitQuotes()' #quoteForm='ngForm'>
            <!-- Name Form -->
             <div class="form-group">
 
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name" #name="ngModel" required>
-                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <input type="text" class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name1" #name="ngModel" required>
+                <div [hidden]="name.pristine" class="alert alert-danger">
                     <p> Name is Required</p>
                     
                 </div>
@@ -21,7 +21,7 @@
 
                 <label for="description">Description</label>
                 <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuotes.description" name="description" #description="ngModel" required></textarea>
-                <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                <div [hidden]="description.pristine" class="alert alert-danger">
                     <p> Description is Required</p>
                 
             </div>
@@ -30,7 +30,7 @@
             <div class="form-group">
                 <label for="complete">Completion</label>
                 <input type='date' id="complete" [(ngModel)]="newQuotes.completeDate" name="completeDate" #completeDate="ngModel" required>
-                <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                <div [hidden]="completeDate.pristine" class="alert alert-danger">
                     <p> Complete Date is Required</p>
                 </div>
             </div>
