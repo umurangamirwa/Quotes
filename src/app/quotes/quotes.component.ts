@@ -8,7 +8,7 @@ import {Quotes} from '../quotes'
 })
 export class QuotesComponent implements OnInit {
       quotes = [
-        new Quotes(1,'Watch Finding Nemo','Andrew', 'mimi',new Date(2019,1,20),1, 1),
+        new Quotes(1,'Watch Finding Nemo','Andrew', 'mimi',new Date(2019,1,29),1, 1),
         new Quotes(2,'I show up ready to play, so I normally try and fit the situation','Angelo','mimi',new Date(2002,4,6),1,1),
         new Quotes(3, 'Only I can change my life. No one can do it for me','Franmcois','mimi',new Date(2002,6,4),1,1),
         // new Quotes(4, 'Keep your eyes on the stars, and your feet on the ground','Life is 10% what happens to you and 90% how you react to it',new Date(2002,3,8)),
