@@ -17,9 +17,9 @@
                 <i class="fa fa-sort">details</i>
             </button>&nbsp;
             <button (click)="upvote(i)" class="btn btn-primary btn-xs">
-              <i class="up"></i>{{quote.upvotes}}</button>&nbsp;&nbsp;
+              <i class="up"></i>upvote {{quote.upvotes}}</button>&nbsp;&nbsp;
               <button (click)="downvote(i)" class="btn btn-info btn-xs">
-                <i class="down"></i>{{quote.downvotes}}</button>&nbsp;&nbsp; 
+                <i class="down"></i>downvote {{quote.downvotes}}</button>&nbsp;&nbsp; 
                 
                   <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuotes($event,i)'></app-quote-details>
         </ul>
