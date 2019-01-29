@@ -1,10 +1,14 @@
 <h1>Enter your information & Quotes</h1>
-<div class="container">
+
 
     <div class="row">
-        <app-quote-form (addNewQuotes)="addNewQuotes()"></app-quote-form>
+      <div class="col-md-6">
+        <app-quote-form (addNewQuotes)="addNewQuotes()" id="form"></app-quote-form>
     </div>
-    <div class="row" *ngFor='let quote of quotes;let i = index'>
+
+
+    <div class="col-md-6">
+    <div *ngFor='let quote of quotes;let i = index'>
         <ul>
             <li id="listed">
                 {{quote.name}} Author:{{quote.Author}}  posted{{quote.notecount}} day(s) ago.
@@ -22,6 +26,7 @@
     </div>
         <!-- <app-quote-form (addQuote)="addNewQuotes($event, i)"></app-quote-form>    -->
   </div>
+  
 <!--         
         <h4 id="{{i}}" appStrikethrough>{{Quotes.name}} due on {{Quotes.completeDate|date|uppercase}}</h4>
          
