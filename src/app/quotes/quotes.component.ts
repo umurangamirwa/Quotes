@@ -16,6 +16,14 @@ export class QuotesComponent implements OnInit {
         // new Quotes(6,'Do not take life too seriously. You will never get out of it alive' ,'I love the way Pharell is laying down great drum tracks. He is a great drummer',new Date(2002,8,7)),
      
     ]
+    addNewQuotes(quote){
+        console.log(quote)
+        let quoteLength = this.quotes.length;
+        quote.id=quoteLength+1;
+        quote.completeDate = new Date(quote.completeDate)
+        this.quotes.push(quote)
+    
+    }
     toggleDetails(index){
         this.quotes[index].showDescription = !this.quotes[index].showDescription;
     }
@@ -35,13 +43,7 @@ export class QuotesComponent implements OnInit {
   constructor() { }
   ngOnInit() {
     }
-    addNewQuotes(quote){
-        let quoteLength = this.quotes.length;
-        quote.id=quoteLength+1;
-        quote.completeDate = new Date(quote.completeDate)
-        this.quotes.push(quote)
     
-    }
 }
 
 
