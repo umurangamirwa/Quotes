@@ -18,7 +18,7 @@
                 <i class="down"></i>{{quote.downvotes}}</button>&nbsp;&nbsp; 
                 <button (click)="toggleDetails(i)" class="btn btn-dange btn-xs">
                   <i class="up"></i>{{quote.upvotes}}</button>
-                  <app-quote-details (isComplete)="deleteQuotes($event, i)" [quote]='quote'></app-quote-details>
+                  <app-quote-details (isComplete)="deleteQuotes($event, i)" [quote]="quote"></app-quote-details>
         </ul>
     </div>
         <!-- <app-quote-form (addQuote)="addNewQuotes($event, i)"></app-quote-form>     -->
@@ -37,10 +37,10 @@
     <!-- </div>  -->
     
 
-<!-- <p *ngIf='quotes.length > 5'>You have too many quotes</p>
-constructor() {}
+<p *ngIf='quotes.length > 5'>You have too many quotes</p> 
+<!-- constructor() {}
 
   ngOnInit() {
       
-  } -->
+  }  -->
 
