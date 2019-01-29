@@ -16,7 +16,7 @@ export class QuotesComponent implements OnInit {
         // new Quotes(6,'Do not take life too seriously. You will never get out of it alive' ,'I love the way Pharell is laying down great drum tracks. He is a great drummer',new Date(2002,8,7)),
      
     ]
-    toogleDetails(index){
+    toggleDetails(index){
         this.quotes[index].showDescription = !this.quotes[index].showDescription;
     }
     upvote(index){

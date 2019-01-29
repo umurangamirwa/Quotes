@@ -10,15 +10,14 @@
                 {{quote.name}} Author:{{quote.Author}}  posted{{quote.notecount}} day(s) ago.
             </li>
             <button (click)="toggleDetails(i)" class="btn btn-info btn-xs">
-                <i class="fa fa-sort">delete</i>
+                <i class="fa fa-sort">details</i>
             </button>&nbsp;
             <button (click)="toggleDetails(i)" class="btn btn-primary btn-xs">
               <i class="up"></i>{{quote.upvotes}}</button>&nbsp;&nbsp;
               <button (click)="toggleDetails(i)" class="btn btn-info btn-xs">
                 <i class="down"></i>{{quote.downvotes}}</button>&nbsp;&nbsp; 
-                <button (click)="toggleDetails(i)" class="btn btn-dange btn-xs">
-                  <i class="up"></i>{{quote.upvotes}}</button>
-                  <app-quote-details (isComplete)="deleteQuotes($event, i)" [quote]="quote"></app-quote-details>
+                
+                  <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuotes($event,i)'></app-quote-details>
         </ul>
     </div>
         <!-- <app-quote-form (addQuote)="addNewQuotes($event, i)"></app-quote-form>    -->
