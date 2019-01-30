@@ -32,9 +32,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 For any questions,addition,ideas or concerns. Don't hesitate to contact me via my E-mail:umurangamclaire@gmail.com
 Tel number:0781055307
 
-## Link to visite site on Github pages:
-
-https://umurangamirwa.github.io/Quotes/
 
 ## License
 MIT copyright(c)2019
